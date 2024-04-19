@@ -47,6 +47,7 @@
         </div>
       </nav>
     </header>
+    <!-- top page section -->
     <div
       class="box-content max-w-full lg:pl-20 py-10 lg:py-30"
       style="background-image: url(./images/arang.jpg)"
@@ -78,6 +79,7 @@
     <main
       class="grid grid-flow-row grid-cols-1 lg:grid-flow-col lg:grid-cols-2 gap-y-1.5 lg:gap-4 py-8 lg:py-16 mx-auto px-8 lg:px-16"
     >
+      <!-- article section -->
       <div class="px-auto py-5 text-wrap">
         <h2
           class="text-xl lg:text-3xl font-extrabold leading-tight text-gray-900 pb-8 lg:pb-16"
@@ -141,11 +143,12 @@
           strengthen customer preferences
         </p>
       </div>
+      <!-- gallery section -->
       <div
         class="bg-white border-collapse rounded-lg shadow-2xl border-black pt-4 lg:pt-8 my-auto"
       >
         <h2
-          class="text-xl lg:text-3xl font-bold lg:font-extrabold leading-tight text-gray-900 pb-4 lg:pb-16 text-center"
+          class="text-xl lg:text-3xl font-lato font-semibold leading-tight text-gray-900 pb-4 lg:pb-16 text-center"
         >
           Our Gallery
         </h2>
@@ -180,31 +183,27 @@
         </div>
       </div>
     </main>
-    <div
-      class="box-content max-w-full max-h-96 lg:pl-20 py-10 lg:py-30 mb-8"
-      style="background-image: url(./images/arang.jpg)"
+    <!-- Product Section -->
+    <h3
+      class="text-black text-2xl text-center lg:text-5xl font-lato font-semibold pb-8"
     >
-      <article class="text-wrap text-center items-center">
-        <h3
-          class="text-white text-2xl lg:text-5xl font-lato font-semibold pb-8"
-        >
-          Our Products
-        </h3>
-        <div class="flex justify-center">
-          <p class="text-white text-md lg:text-lg lg:w-[700px] font-normal">
-            We are a supplier of briquettes and charcoal in Indonesia Through
-            our dedicated production and quality control team who tirelessly
-            work to provide the best quality briquettes and charcoal expected by
-            our clients.
-          </p>
-        </div>
-      </article>
+      Our Products
+    </h3>
+    <div
+      class="grid grid-flow-row grid-cols-1 lg:grid-flow-col lg:grid-cols-2 gap-y-1.5 lg:gap-4 p-8 lg:p-16 mx-auto"
+    >
+      <div
+        class="bg-white border-collapse rounded-lg shadow-2xl mx-auto lg:w-80 border-black pt-4 lg:pt-8 my-auto"
+      >
+        <img src="./images/arangbbq.jpg" class="h-96 w-96 object-cover" />
+        <p>Hello World</p>
+      </div>
     </div>
-    <div class="fixed bottom-4 right-4 z-50">
+    <div class="fixed bottom-4 mb-2 left-4 z-50">
       <a
-        href="https://api.whatsapp.com/send?phone=+6289699501548"
+        href="https://api.whatsapp.com/send/?phone=6289529312100"
         target="_blank"
-        class="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-full shadow-lg transition-colors duration-300"
+        class="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold p-2 rounded-full shadow-lg transition-colors duration-300"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -237,6 +236,7 @@
             clip-rule="evenodd"
           ></path>
         </svg>
+        <span class="hidden lg:contents contact-text">Contact Us</span>
       </a>
     </div>
     <footer class="bg-black">
@@ -324,6 +324,19 @@
           },
         },
       });
+      const contactText = document.querySelector(".contact-text");
+
+      document
+        .querySelector(".fixed.bottom-4.right-4.z-50 a")
+        .addEventListener("mouseenter", () => {
+          contactText.textContent = "WhatsApp";
+        });
+
+      document
+        .querySelector(".fixed.bottom-4.right-4.z-50 a")
+        .addEventListener("mouseleave", () => {
+          contactText.textContent = "Contact Us";
+        });
     </script>
   </body>
 </html>
