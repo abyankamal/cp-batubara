@@ -11,21 +11,31 @@
   </head>
   <body class="min-h-screen bg-white max-w-7xl">
     <header>
-      <nav class="flex items-center justify-between mx-auto px-6 lg:px-8">
+      <nav
+        class="flex sticky top-0 items-center justify-between mx-auto px-6 lg:px-8"
+      >
         <div class="flex lg:flex-1">
           <img src="./images/logo.png" width="100" />
         </div>
         <div class="hidden -mr-4 lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+          <a
+            href="#"
+            class="text-sm font-lato font-semibold leading-6 text-gray-900"
             >Product</a
           >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+          <a
+            href="#"
+            class="text-sm font-lato font-semibold leading-6 text-gray-900"
             >Features</a
           >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+          <a
+            href="#"
+            class="text-sm font-lato font-semibold leading-6 text-gray-900"
             >Marketplace</a
           >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+          <a
+            href="#"
+            class="text-sm font-lato font-semibold leading-6 text-gray-900"
             >Company</a
           >
         </div>
@@ -33,13 +43,13 @@
           <span class="isolate inline-flex rounded-md shadow-sm">
             <button
               type="button"
-              class="relative inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
+              class="relative font-lato inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
             >
               English
             </button>
             <button
               type="button"
-              class="relative -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
+              class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
             >
               Indonesia
             </button>
@@ -145,10 +155,10 @@
       </div>
       <!-- gallery section -->
       <div
-        class="bg-white border-collapse rounded-lg shadow-2xl border-black pt-4 lg:pt-8 my-auto"
+        class="bg-white border-collapse rounded-lg shadow-2xl border-black my-auto"
       >
         <h2
-          class="text-xl lg:text-3xl font-lato font-semibold leading-tight text-gray-900 pb-4 lg:pb-16 text-center"
+          class="text-xl lg:text-3xl font-lato font-semibold leading-tight text-gray-900 pb-4 lg:pb-8 text-center"
         >
           Our Gallery
         </h2>
@@ -190,15 +200,46 @@
       Our Products
     </h3>
     <div
-      class="grid grid-flow-row grid-cols-1 lg:grid-flow-col lg:grid-cols-2 gap-y-1.5 lg:gap-4 p-8 lg:p-16 mx-auto"
+      class="grid grid-flow-row grid-cols-1 lg:grid-flow-col lg:grid-cols-3 gap-y-4 lg:gap-8 p-4 lg:p-16 mx-auto"
     >
       <div
-        class="bg-white border-collapse rounded-lg shadow-2xl mx-auto lg:w-80 border-black pt-4 lg:pt-8 my-auto"
+        class="bg-white border-collapse rounded-lg shadow-2xl mx-auto lg:w-80 border-black"
       >
-        <img src="./images/arangbbq.jpg" class="h-96 w-96 object-cover" />
-        <p>Hello World</p>
+        <div class="relative">
+          <img src="./images/arangbbq.jpg" class="h-96 w-auto" />
+          <div
+            class="border-separate border-solid border-2 border-black absolute inset-x-0 bottom-0 mb-4 flex justify-center"
+          >
+            <div class="bg-white px-4 py-2 text-center">
+              <p class="text-sm uppercase font-bold tracking-wider">
+                Premium Quality
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-white border-collapse rounded-lg shadow-2xl mx-auto lg:w-80 border-black"
+      >
+        <img src="./images/arangbbq.jpg" class="h-96 mx-auto" />
+        <div
+          class="bg-white border-separate border-solid border-2 border-black mx-auto py-2 w-56"
+        >
+          <p class="font-lato text-center">Index HTML</p>
+        </div>
+      </div>
+      <div
+        class="bg-white border-collapse rounded-lg shadow-2xl mx-auto lg:w-80 border-black"
+      >
+        <img src="./images/arangbbq.jpg" class="h-96 mx-auto" />
+        <div
+          class="bg-white border-separate border-solid border-2 border-black mx-auto py-2 w-56"
+        >
+          <p class="font-lato text-center">Index HTML</p>
+        </div>
       </div>
     </div>
+    <!-- whatsapp button -->
     <div class="fixed bottom-4 mb-2 left-4 z-50">
       <a
         href="https://api.whatsapp.com/send/?phone=6289529312100"
