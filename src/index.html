@@ -9,7 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   </head>
-  <body class="min-h-screen bg-white max-w-7xl">
+  <body class="min-h-screen bg-white max-w-7xl scroll-smooth">
     <header>
       <nav
         class="flex sticky top-0 items-center justify-between mx-auto px-6 lg:px-8"
@@ -202,21 +202,21 @@
     <div
       class="grid grid-flow-row grid-cols-1 lg:grid-flow-col lg:grid-cols-3 gap-y-4 lg:gap-8 p-4 lg:p-16 mx-auto"
     >
-      <div
-        class="bg-white border-spacing-0 rounded-lg shadow-2xl mx-auto lg:w-80 border-black"
-      >
+      <div class="bg-white rounded-lg shadow-2xl mx-auto">
         <div class="relative">
-          <img src="./images/arangbbq.jpg" class="h-96 w-auto" />
+          <img src="./images/arangbbq.jpg" class="h-96 object-cover mx-auto" />
           <div
-            class="border-separate border-solid border-2 border-black absolute inset-x-0 bottom-0 mb-4 flex justify-center"
+            class="flex items-center lg:left-20 absolute bottom-0 transform translate-y-3 bg-white border-2 border-black px-4 py-2 text-center mx-auto justify-center"
           >
-            <div class="bg-white px-4 py-2 text-center">
-              <p class="text-sm uppercase font-bold tracking-wider">
-                Premium Quality
-              </p>
-            </div>
+            <p class="text-sm uppercase font-bold tracking-wider">
+              Premium Quality
+            </p>
           </div>
         </div>
+        <p class="text-center pt-8 mx-auto">
+          arang briket ini di buat dari berbagai bahan seperti serbuk gergaji
+          dan tempurung kelapa
+        </p>
       </div>
       <div
         class="bg-white border-collapse rounded-lg shadow-2xl mx-auto lg:w-80 border-black"
