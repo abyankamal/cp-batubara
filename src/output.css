@@ -618,11 +618,6 @@ video {
   position: sticky;
 }
 
-.inset-x-0{
-  left: 0px;
-  right: 0px;
-}
-
 .bottom-0{
   bottom: 0px;
 }
@@ -643,16 +638,40 @@ video {
   top: 0px;
 }
 
-.left-3{
-  left: 0.75rem;
+.left-5{
+  left: 1.25rem;
+}
+
+.left-20{
+  left: 5rem;
 }
 
 .left-1\/2{
   left: 50%;
 }
 
-.left-20{
-  left: 5rem;
+.left-1\/3{
+  left: 33.333333%;
+}
+
+.left-10{
+  left: 2.5rem;
+}
+
+.left-1\/4{
+  left: 25%;
+}
+
+.left-2\/4{
+  left: 50%;
+}
+
+.left-0{
+  left: 0px;
+}
+
+.right-0{
+  right: 0px;
 }
 
 .isolate{
@@ -685,24 +704,12 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mb-4{
-  margin-bottom: 1rem;
-}
-
 .mt-1{
   margin-top: 0.25rem;
 }
 
 .mt-8{
   margin-top: 2rem;
-}
-
-.-mt-12{
-  margin-top: -3rem;
-}
-
-.mt-12{
-  margin-top: 3rem;
 }
 
 .box-content{
@@ -757,10 +764,6 @@ video {
   width: 1.5rem;
 }
 
-.w-64{
-  width: 16rem;
-}
-
 .w-auto{
   width: auto;
 }
@@ -769,8 +772,20 @@ video {
   width: 100%;
 }
 
-.w-96{
-  width: 24rem;
+.w-8{
+  width: 2rem;
+}
+
+.w-16{
+  width: 4rem;
+}
+
+.w-32{
+  width: 8rem;
+}
+
+.w-48{
+  width: 12rem;
 }
 
 .max-w-7xl{
@@ -787,16 +802,6 @@ video {
 
 .border-separate{
   border-collapse: separate;
-}
-
-.translate-y-1\/2{
-  --tw-translate-y: 50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-1\/4{
-  --tw-translate-y: 25%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .translate-y-3{
@@ -852,10 +857,6 @@ video {
 
 .text-wrap{
   text-wrap: wrap;
-}
-
-.text-balance{
-  text-wrap: balance;
 }
 
 .rounded-full{
@@ -973,6 +974,11 @@ video {
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-4{
@@ -1201,6 +1207,10 @@ video {
 @media (min-width: 1024px){
   .lg\:left-20{
     left: 5rem;
+  }
+
+  .lg\:left-1\/2{
+    left: 50%;
   }
 
   .lg\:flex{
