@@ -30,30 +30,46 @@
   >
     <header>
       <nav
-        class="flex sticky top-0 items-center justify-between mx-auto px-6 lg:px-8"
+        class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
+        aria-label="Global"
       >
         <div class="flex lg:flex-1">
           <img src="./images/logo.png" width="100" />
         </div>
-        <div class="hidden -mr-4 lg:flex lg:gap-x-12">
-          <a
-            href="#"
-            class="text-sm font-lato font-semibold leading-6 text-gray-900"
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            id="mobileMenuButton"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
             >Product</a
           >
-          <a
-            href="#"
-            class="text-sm font-lato font-semibold leading-6 text-gray-900"
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
             >Features</a
           >
-          <a
-            href="#"
-            class="text-sm font-lato font-semibold leading-6 text-gray-900"
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
             >Marketplace</a
           >
-          <a
-            href="#"
-            class="text-sm font-lato font-semibold leading-6 text-gray-900"
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
             >Company</a
           >
         </div>
@@ -74,6 +90,88 @@
           </span>
         </div>
       </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div
+        class="lg:hidden"
+        role="dialog"
+        aria-modal="true"
+        id="mobileMenu"
+        style="display: none"
+      >
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-between">
+            <img src="./images/logo.png" width="100" />
+            <button
+              type="button"
+              class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              id="closeMenuButton"
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Product</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Features</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Marketplace</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Company</a
+                >
+              </div>
+              <div class="py-6">
+                <p class="mb-4">Language Option</p>
+                <span class="isolate inline-flex rounded-md shadow-sm">
+                  <button
+                    type="button"
+                    class="relative font-lato inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
+                  >
+                    English
+                  </button>
+                  <button
+                    type="button"
+                    class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
+                  >
+                    Indonesia
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- top page section -->
     <div
@@ -108,7 +206,7 @@
       </div>
     </div>
     <main
-      class="grid grid-flow-row grid-cols-1 lg:grid-flow-col lg:grid-cols-2 gap-y-1.5 lg:gap-4 py-8 lg:py-16 mx-auto px-8 lg:px-16"
+      class="grid grid-flow-row grid-cols-1 gap-y-1.5 lg:gap-4 py-8 lg:py-16 mx-auto px-8 lg:px-16"
     >
       <!-- article section -->
       <div class="px-auto py-5 text-wrap">
@@ -176,7 +274,7 @@
       </div>
       <!-- gallery section -->
       <div
-        class="bg-white border-collapse rounded-lg shadow-2xl border-black my-auto"
+        class="bg-white border-separate rounded-lg shadow-2xl border-black my-auto"
       >
         <h2
           class="text-xl lg:text-3xl font-lato font-semibold leading-tight text-gray-900 pb-4 lg:pb-8 text-center"
@@ -198,7 +296,7 @@
               <div class="swiper-slide">
                 <img
                   class="object-center object-cover w-full h-full"
-                  src="./images/arang.jpg"
+                  src="./images/arangkayu.jpg"
                 />
               </div>
               <div class="swiper-slide">
@@ -227,7 +325,10 @@
         class="bg-white rounded-lg shadow-2xl mx-auto overflow-hidden hover:overflow-visible transform transition-transform duration-500 hover:-translate-y-4 lg:hover:-translate-y-12"
       >
         <div class="relative">
-          <img src="./images/arangbbq.jpg" class="h-96 object-cover mx-auto" />
+          <img
+            src="./images/arangbbq.jpg"
+            class="h-96 w-[300px] object-cover mx-auto"
+          />
           <div
             class="flex items-center w-48 left-0 right-0 absolute -bottom-4 bg-white border-2 border-black px-4 py-2 text-center mx-auto justify-center"
           >
@@ -236,7 +337,7 @@
             </p>
           </div>
         </div>
-        <p class="text-center text-wrap py-4 mx-auto w-48 lg:w-64">
+        <p class="text-justify text-balance py-4 mx-auto w-48 lg:w-64">
           arang briket ini di buat dari berbagai bahan seperti serbuk gergaji
           dan tempurung kelapa
         </p>
@@ -245,36 +346,43 @@
         class="bg-white rounded-lg shadow-2xl mx-auto overflow-hidden hover:overflow-visible transform transition-transform duration-500 hover:-translate-y-4 lg:hover:-translate-y-12"
       >
         <div class="relative">
-          <img src="./images/arangbbq.jpg" class="h-96 object-cover mx-auto" />
+          <img
+            src="./images/arangkayu.jpg"
+            class="h-96 w-[300px] object-cover mx-auto"
+          />
           <div
             class="flex items-center w-48 left-0 right-0 absolute -bottom-4 bg-white border-2 border-black px-4 py-2 text-center mx-auto justify-center"
           >
             <p class="text-sm uppercase font-bold font-lato tracking-wider">
-              ARANG BRIKET BBQ
+              ARANG KAYU KERAS
             </p>
           </div>
         </div>
-        <p class="text-center text-wrap py-4 mx-auto w-48 lg:w-64">
-          arang briket ini di buat dari berbagai bahan seperti serbuk gergaji
-          dan tempurung kelapa
+        <p class="text-justify text-balance py-4 mx-auto w-48 lg:w-64">
+          Arang kayu kami terbuat dari kayu pilihan, mulai dari kayu halaban,
+          kayu mahoni, kayu asam jawa atau bisa juga dicampur dengan
+          kayu keras lainnya.
         </p>
       </div>
       <div
         class="bg-white rounded-lg shadow-2xl mx-auto overflow-hidden hover:overflow-visible transform transition-transform duration-500 hover:-translate-y-4 lg:hover:-translate-y-12"
       >
         <div class="relative">
-          <img src="./images/arangbbq.jpg" class="h-96 object-cover mx-auto" />
+          <img
+            src="./images/arangkelapa.jpg"
+            class="h-96 w-[300px] object-cover mx-auto"
+          />
           <div
             class="flex items-center w-48 left-0 right-0 absolute -bottom-4 bg-white border-2 border-black px-4 py-2 text-center mx-auto justify-center"
           >
             <p class="text-sm uppercase font-bold font-lato tracking-wider">
-              ARANG BRIKET BBQ
+              ARANG TEMPURUNG KELAPA
             </p>
           </div>
         </div>
-        <p class="text-center text-wrap py-4 mx-auto w-48 lg:w-64">
-          arang briket ini di buat dari berbagai bahan seperti serbuk gergaji
-          dan tempurung kelapa
+        <p class="text-justify text-balance py-4 mx-auto w-48 lg:w-64">
+          arang tempurung kelapa kami merupakan bahan yang dapat digunakan untuk
+          berbagai jenis kebutuhan.
         </p>
       </div>
     </div>
@@ -363,6 +471,7 @@
       <a
         href="https://api.whatsapp.com/send/?phone=6289529312100"
         target="_blank"
+        id="contactButton"
         class="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold p-2 rounded-full shadow-lg transition-colors duration-300"
       >
         <svg
@@ -484,19 +593,39 @@
           },
         },
       });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menuToggle");
+        const menuItems = document.getElementById("menuItems");
+
+        menuToggle.addEventListener("click", function () {
+          menuItems.classList.toggle("hidden");
+        });
+      });
       const contactText = document.querySelector(".contact-text");
 
       document
-        .querySelector(".fixed.bottom-4.right-4.z-50 a")
+        .querySelector(".fixed.bottom-4.left-4.z-50 a")
         .addEventListener("mouseenter", () => {
           contactText.textContent = "WhatsApp";
         });
 
       document
-        .querySelector(".fixed.bottom-4.right-4.z-50 a")
+        .querySelector(".fixed.bottom-4.left-4.z-50 a")
         .addEventListener("mouseleave", () => {
           contactText.textContent = "Contact Us";
         });
+      const mobileMenuButton = document.getElementById("mobileMenuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const closeMenuButton = document.getElementById("closeMenuButton");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.style.display = "block";
+      });
+
+      closeMenuButton.addEventListener("click", () => {
+        mobileMenu.style.display = "none";
+      });
     </script>
   </body>
 </html>
