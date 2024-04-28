@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
     <title>Sinar Niaga Group</title>
     <link
       rel="stylesheet"
@@ -61,17 +61,21 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-            >Product</a
+          <a href="#home" class="text-sm font-semibold leading-6 text-gray-900"
+            >Home</a
           >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-            >Features</a
+          <a href="#about" class="text-sm font-semibold leading-6 text-gray-900"
+            >Tentang</a
           >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-            >Marketplace</a
+          <a
+            href="#gallery"
+            class="text-sm font-semibold leading-6 text-gray-900"
+            >Galleri</a
           >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-            >Company</a
+          <a
+            href="#contact"
+            class="text-sm font-semibold leading-6 text-gray-900"
+            >Kontak</a
           >
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -81,14 +85,14 @@
               type="button"
               class="relative font-lato inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
             >
-              English
+              Inggris
             </button>
             <button
               onclick="window.location.href='index-id.html'"
               type="button"
               class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
             >
-              Indonesian
+              Indonesia
             </button>
           </span>
         </div>
@@ -104,7 +108,7 @@
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-10"></div>
         <div
-          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          class="fixed inset-y-0 right-0 z-10 w-96 overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
         >
           <div class="flex items-center justify-between">
             <img src="./images/logo.png" width="100" />
@@ -134,36 +138,38 @@
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
                 <a
-                  href="#"
+                  href="#home"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Product</a
+                  >Home</a
                 >
                 <a
-                  href="#"
+                  href="#about"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Features</a
+                  >Tentang</a
                 >
                 <a
-                  href="#"
+                  href="#gallery"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Marketplace</a
+                  >Galleri</a
                 >
                 <a
-                  href="#"
+                  href="#contact"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Company</a
+                  >Kontak</a
                 >
               </div>
               <div class="py-6">
                 <p class="mb-4">Language Option</p>
                 <span class="isolate inline-flex rounded-md shadow-sm">
                   <button
+                    onclick="window.location.href='index.html'"
                     type="button"
                     class="relative font-lato inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
                   >
-                    English
+                    Inggris
                   </button>
                   <button
+                    onclick="window.location.href='index-id.html'"
                     type="button"
                     class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
                   >
@@ -178,6 +184,7 @@
     </header>
     <!-- top page section -->
     <div
+      id="home"
       class="box-content max-w-full lg:pl-20 py-10 lg:py-30"
       style="background-image: url(./images/arang.jpg)"
     >
@@ -191,10 +198,10 @@
           <p
             class="text-white font-lato text-balance text-md lg:text-lg font-normal"
           >
-            We are a supplier of briquettes and charcoal in Indonesia Through
-            our dedicated production and quality control team who tirelessly
-            work to provide the best quality briquettes and charcoal expected by
-            our clients.
+            Kami adalah pemasok briket dan arang di Indonesia. Melalui tim
+            produksi dan kontrol kualitas kami yang berdedikasi yang tanpa lelah
+            bekerja untuk menyediakan briket dan arang dengan kualitas terbaik
+            yang diharapkan oleh klien kami.
           </p>
         </div>
       </article>
@@ -204,7 +211,7 @@
           class="transition ease-in-out hover:-translate-y-1 hover:scale-100 rounded-full bg-green-600 px-4 py-2 lg:px-6 lg:py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
           href="https://api.whatsapp.com/send/?phone=6289529312100"
         >
-          <p class="font-lato">Order Now</p>
+          <p class="font-lato">Order Sekarang</p>
         </a>
       </div>
     </div>
@@ -212,95 +219,128 @@
       class="grid grid-flow-row grid-cols-1 gap-y-1.5 lg:gap-4 py-8 lg:py-16 mx-auto px-8 lg:px-16"
     >
       <!-- article section -->
-      <div class="px-auto py-5 text-wrap lg:w-[700px] mx-auto">
+      <div id="about" class="px-auto py-5 text-wrap lg:w-[700px] mx-auto">
         <h2
           class="text-xl lg:text-3xl font-extrabold leading-tight text-gray-900 pb-8 lg:pb-16"
         >
-          5 Reasons Why Our Product Must You Buy
+          5 Alasan Mengapa Produk Kami Harus Kalian Beli
         </h2>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
         >
-          1. About
+          1. Kepercayaan
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
         >
-          We are a leading export company dedicated to providing high quality
-          charcoal and briquette products, sustainably made and meticulously to
-          meet the diverse needs of our customers
+          Kami adalah perusahaan ekspor terkemuka yang berdedikasi untuk
+          menyediakan produk arang dan briket, dibuat secara berkelanjutan dan
+          cermat untuk memenuhi beragam kebutuhan pelanggan kami
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
         >
-          2. Integrity
+          2. Integritas
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
         >
-          Stick to the principles and meet the standards and quality desired by
-          buyers
+          Memegang teguh pada prinsip-prinsip dan memenuhi standar dan kualitas
+          yang diinginkan oleh pembeli
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
         >
-          3. Quality
+          3. Menjaga Kualitas
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
         >
-          Quality is generated in many ways by supporting pleasant products and
-          services to customers as well as building a good working environment
+          Kualitas dihasilkan dengan berbagai cara dengan mendukung produk dan
+          dan layanan yang menyenangkan kepada pelanggan serta membangun
+          lingkungan kerja yang baik
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
         >
-          4. Commitment
+          4. Komitmen
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
         >
-          We will continue to provide the best service to our customers at all
-          times.
+          Kami akan terus memberikan layanan terbaik kepada pelanggan kami
+          setiap saat waktu.
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
         >
-          5. Innovation
+          5. Inovasi
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
         >
-          develop products and services that have high appeal in the market and
-          strengthen customer preferences
+          mengembangkan produk dan layanan yang memiliki daya tarik tinggi di
+          pasar dan memperkuat preferensi pelanggan
         </p>
       </div>
       <!-- gallery section -->
-      <div class="bg-white p-4">
-        <h2 class="text-xl font-bold mb-4">Gallery</h2>
-        <h3 class="text-lg font-semibold mb-2">Some of our documentation</h3>
-        <p class="mb-4">
-          Showcase high-quality images and videos of your charcoal production
-          process, your products in use, and the positive impact you have on the
-          environment and local communities.
+      <div id="gallery" class="bg-white p-4 text-center">
+        <hr class="border-gray-300 mb-4" />
+        <h2 class="text-5xl text-center font-bold mb-4">
+          Dokumentasi Pembuatan Produk
+        </h2>
+        <h3 class="text-lg font-semibold mb-2">
+          Berikut merupakan beberapa dokumentasi kami
+        </h3>
+        <p class="mb-4 w-1/2 text-balance text-center mx-auto">
+          Temukan perbedaannya! Melalui visual yang memikat, kami
+          mendemonstrasikan metode produksi arang ramah lingkungan, efektivitas
+          produk kami, dan manfaat jangka panjang yang kami berikan kepada
+          lingkungan dan masyarakat setempat.
         </p>
         <hr class="border-gray-300 mb-4" />
-        <div class="grid grid- md:grid-cols-3 gap-4">
-          <img src="images/arang.jpg" alt="Image 1" class="rounded-lg" />
-          <img src="images/arang.jpg" alt="Image 2" class="rounded-lg" />
-          <img src="images/arang.jpg" alt="Image 3" class="rounded-lg" />
-          <img src="images/arang.jpg" alt="Image 4" class="rounded-lg" />
-          <img src="images/arang.jpg" alt="Image 5" class="rounded-lg" />
+        <div class="grid grid-flow-row md:grid-cols-3 gap-4">
+          <img
+            src="images/produksi1.jpg"
+            alt="Image 1"
+            class="rounded-lg w-[300px] lg:w-[600px] h-[200px] mx-auto object-cover"
+          />
+          <img
+            src="images/produksi2.jpg"
+            alt="Image 2"
+            class="rounded-lg w-[300px] lg:w-[600px] h-[200px] mx-auto object-cover"
+          />
+          <img
+            src="images/produksi3.jpg"
+            alt="Image 3"
+            class="rounded-lg w-[300px] lg:w-[600px] h-[200px] mx-auto object-cover"
+          />
+          <img
+            src="images/produksi4.jpg"
+            alt="Image 4"
+            class="rounded-lg w-[300px] lg:w-[600px] h-[200px] mx-auto object-cover"
+          />
+          <img
+            src="images/produksi5.jpg"
+            alt="Image 5"
+            class="rounded-lg w-[300px] lg:w-[600px] h-[200px] mx-auto object-cover"
+          />
+          <img
+            src="images/produksi6.jpg"
+            alt="Image 5"
+            class="rounded-lg w-[300px] lg:w-[600px] h-[200px] mx-auto object-cover"
+          />
         </div>
       </div>
     </main>
     <!-- Product Section -->
     <h3
-      class="text-black text-2xl text-center lg:text-5xl font-lato font-semibold pb-8"
+      class="text-black text-2xl text-center lg:text-5xl font-lato font-bold pb-8"
     >
-      Our Charcoal Products
+      Koleksi Produk Arang Kami
     </h3>
     <div
+      id="product"
       class="grid grid-flow-row grid-cols-1 lg:grid-flow-col lg:grid-cols-3 gap-y-4 p-4 lg:p-16 mx-auto"
     >
       <div
@@ -315,13 +355,13 @@
             class="flex items-center w-48 left-0 right-0 absolute -bottom-4 bg-white border-2 border-black px-4 py-2 text-center mx-auto justify-center"
           >
             <p class="text-sm uppercase font-bold font-lato tracking-wider">
-              CHARCOAL BBQ BRIQUETTES
+              ARANG BRIKET BBQ
             </p>
           </div>
         </div>
         <p class="text-justify text-balance py-4 mx-auto w-48 lg:w-64">
-          These charcoal briquettes are made from various materials such as
-          sawdust and coconut shells
+          Briket arang ini terbuat dari berbagai bahan seperti serbuk gergaji
+          dan tempurung kelapa
         </p>
       </div>
       <div
@@ -336,14 +376,14 @@
             class="flex items-center w-48 left-0 right-0 absolute -bottom-4 bg-white border-2 border-black px-4 py-2 text-center mx-auto justify-center"
           >
             <p class="text-sm uppercase font-bold font-lato tracking-wider">
-              HARDWOOD CHARCOAL
+              ARANG KAYU KERAS
             </p>
           </div>
         </div>
         <p class="text-justify text-balance py-4 mx-auto w-48 lg:w-64">
-          Our wood charcoal is made from selected wood, ranging from halaban
-          wood, mahogany wood, tamarind wood or can also be mixed with other
-          hardwoods.
+          Arang kayu kami terbuat dari kayu pilihan, mulai dari kayu halaban,
+          kayu mahoni, kayu jawa atau bisa juga dicampur dengan kayu keras
+          lainnya.
         </p>
       </div>
       <div
@@ -358,17 +398,18 @@
             class="flex items-center w-48 left-0 right-0 absolute -bottom-4 bg-white border-2 border-black px-4 py-2 text-center mx-auto justify-center"
           >
             <p class="text-sm uppercase font-bold font-lato tracking-wider">
-              COCONUT SHELL CHARCOAL
+              ARANG TEMPURUNG KELAPA
             </p>
           </div>
         </div>
         <p class="text-justify text-balance py-4 mx-auto w-48 lg:w-64">
-          Our coconut shell charcoal is a material that can be used for various
-          types of needs.
+          Arang batok kelapa kami merupakan bahan yang dapat digunakan untuk
+          berbagai jenis kebutuhan.
         </p>
       </div>
     </div>
     <div
+      id="contact"
       class="box-content max-w-full mx-auto lg:mx-0 px-10 lg:pl-20 py-10 lg:py-30"
       style="background-image: url(./images/arang.jpg)"
     >
@@ -376,76 +417,91 @@
         <h3
           class="text-white text-2xl lg:text-5xl font-lato font-semibold pb-8"
         >
-          Intrested ? Please Contact Us
+          Anda Tertarik ? Bisa Banget Hubungi Kita
         </h3>
-        <div class="bg-white rounded-lg shadow-2xl py-4 px-10 lg:w-1/2">
-          <div class="mb-4">
-            <!-- <label
+        <form
+          id="contact-form"
+          action="mailto:kamalmuhammad414@gmail.com"
+          method="post"
+        >
+          <div class="bg-white rounded-lg shadow-2xl py-4 px-10 lg:w-1/2">
+            <div class="mb-4">
+              <!-- <label
               for="email"
               class="block text-left text-sm font-medium leading-6 text-gray-900"
               >First Name</label
             > -->
-            <div class="mt-2">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                placeholder="First Name"
-              />
+              <div class="mt-2">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  placeholder="Nama Anda"
+                />
+              </div>
             </div>
-          </div>
-          <div class="mb-4">
-            <!-- <label
+            <div class="mb-4">
+              <!-- <label
               for="email"
               class="block text-left text-sm font-medium leading-6 text-gray-900"
               >Email</label
             > -->
-            <div class="mt-2">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                placeholder="you@example.com"
-              />
+              <div class="mt-2">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  placeholder="you@example.com"
+                />
+              </div>
             </div>
-          </div>
-          <!-- <label
+            <!-- <label
             for="email"
             class="block text-left text-sm font-medium leading-6 text-gray-900"
             >Phone Number</label
           > -->
-          <div class="mb-4 flex">
-            <select
-              class="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 mr-2"
-            >
-              <option value="+62">ID +62</option>
-              <option value="+1">US +1</option>
-              <!-- Add more options for other country codes -->
-            </select>
-            <input
-              type="tel"
-              placeholder="Phone (Optional)"
-              class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            <div class="mb-4">
+              <!-- <select
+                class="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 mr-2"
+              >
+                <option value="+62">ID +62</option>
+                <option value="+1">US +1</option>
+              </select> -->
+              <div class="mt-2">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  class="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  placeholder="No Telepon (Optional)"
+                />
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="mt-2">
+                <textarea
+                  rows="4"
+                  name="message"
+                  id="message"
+                  placeholder="Pesan"
+                  class="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                ></textarea>
+              </div>
+            </div>
+            <div class="flex justify-center lg:justify-start mt-8">
+              <button
+                target="_blank"
+                type="submit"
+                value="Send"
+                class="w-full transition ease-in-out hover:-translate-y-1 hover:scale-100 rounded-sm bg-black px-4 py-2 lg:px-6 lg:py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+              >
+                <p class="font-lato">Kirimi Saya Pesan</p>
+              </button>
+            </div>
           </div>
-          <div class="mb-4">
-            <input
-              type="tel"
-              placeholder="Phone (Optional)"
-              class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <div class="flex justify-center lg:justify-start mt-8">
-            <button
-              type="button"
-              class="w-full transition ease-in-out hover:-translate-y-1 hover:scale-100 rounded-sm bg-black px-4 py-2 lg:px-6 lg:py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
-            >
-              <p class="font-lato">Send Me Message</p>
-            </button>
-          </div>
-        </div>
+        </form>
       </article>
     </div>
     <!-- whatsapp button -->
@@ -453,7 +509,6 @@
       <a
         href="https://api.whatsapp.com/send/?phone=6289529312100"
         target="_blank"
-        id="contactButton"
         class="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold p-2 rounded-full shadow-lg transition-colors duration-300"
       >
         <svg
@@ -487,7 +542,7 @@
             clip-rule="evenodd"
           ></path>
         </svg>
-        <span class="hidden lg:contents contact-text">Contact Us</span>
+        <span class="hidden lg:contents contact-text">Contact Kami</span>
       </a>
     </div>
     <footer class="bg-black">
@@ -542,6 +597,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper", {
@@ -607,6 +663,13 @@
 
       closeMenuButton.addEventListener("click", () => {
         mobileMenu.style.display = "none";
+      });
+      const form = document.getElementById("contact-form");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        form.submit();
+        window.location.href = "index-id.html"; // Replace with your desired URL
       });
     </script>
   </body>
