@@ -3,17 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="src/images/favicon.png" />
     <title>Sinar Niaga Group</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <style>
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-content {
+        animation: fadeInUp 1s ease-in-out;
+      }
+    </style>
   </head>
-  <body class="min-h-screen bg-white max-w-7xl">
+  <body class="min-h-screen bg-white max-w-7xl scroll-smooth">
     <header>
       <nav
-        class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
+        class="sticky top-0 mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
         aria-label="Global"
       >
         <div class="flex lg:flex-1">
@@ -44,20 +61,20 @@
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
           <a href="#home" class="text-sm font-semibold leading-6 text-gray-900"
-            >Home</a
+            >الصفحة الرئيسية</a
           >
           <a href="#about" class="text-sm font-semibold leading-6 text-gray-900"
-            >Tentang</a
+            >نبذة عن</a
           >
           <a
             href="#gallery"
             class="text-sm font-semibold leading-6 text-gray-900"
-            >Galleri</a
+            >معرض الصور</a
           >
           <a
             href="#contact"
             class="text-sm font-semibold leading-6 text-gray-900"
-            >Kontak</a
+            >اتصل بنا</a
           >
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -67,14 +84,21 @@
               type="button"
               class="relative font-lato inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
             >
-              Inggris
+              اللغة الإنجليزية
             </button>
             <button
               onclick="window.location.href='index-id.html'"
               type="button"
               class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
             >
-              Indonesia
+              الإندونيسية
+            </button>
+            <button
+              onclick="window.location.href='index-ar.html'"
+              type="button"
+              class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
+            >
+              العربية
             </button>
           </span>
         </div>
@@ -122,40 +146,46 @@
                 <a
                   href="#home"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Home</a
+                  >الصفحة الرئيسية</a
                 >
                 <a
                   href="#about"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Tentang</a
+                  >نبذة عن</a
                 >
                 <a
                   href="#gallery"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Galleri</a
+                  >معرض الصور</a
                 >
                 <a
                   href="#contact"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Kontak</a
+                  >اتصل بنا</a
                 >
               </div>
               <div class="py-6">
-                <p class="mb-4">Language Option</p>
                 <span class="isolate inline-flex rounded-md shadow-sm">
                   <button
                     onclick="window.location.href='index.html'"
                     type="button"
                     class="relative font-lato inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
                   >
-                    Inggris
+                    اللغة الإنجليزية
                   </button>
                   <button
                     onclick="window.location.href='index-id.html'"
                     type="button"
                     class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
                   >
-                    Indonesia
+                    الإندونيسية
+                  </button>
+                  <button
+                    onclick="window.location.href='index-ar.html'"
+                    type="button"
+                    class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
+                  >
+                    العربية
                   </button>
                 </span>
               </div>
@@ -180,10 +210,9 @@
           <p
             class="text-white font-lato text-balance text-md lg:text-lg font-normal"
           >
-            Kami adalah pemasok briket dan arang di Indonesia. Melalui tim
-            produksi dan kontrol kualitas kami yang berdedikasi yang tanpa lelah
-            bekerja untuk menyediakan briket dan arang dengan kualitas terbaik
-            yang diharapkan oleh klien kami.
+            نحن مورد للقوالب والفحم النباتي في إندونيسيا من خلال فريق الإنتاج
+            ومراقبة الجودة المتخصص الذي يعمل بلا كلل لتوفير أفضل أنواع القوالب
+            والفحم النباتي التي يتوقعها عملاؤنا.
           </p>
         </div>
       </article>
@@ -193,7 +222,7 @@
           class="transition ease-in-out hover:-translate-y-1 hover:scale-100 rounded-full bg-green-600 px-4 py-2 lg:px-6 lg:py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
           href="https://api.whatsapp.com/send/?phone=6289529312100"
         >
-          <p class="font-lato">Order Sekarang</p>
+          <p class="font-lato">اطلبها الآن</p>
         </a>
       </div>
     </div>
@@ -205,80 +234,71 @@
         <h2
           class="text-xl lg:text-3xl font-extrabold leading-tight text-gray-900 pb-8 lg:pb-16"
         >
-          5 Alasan Mengapa Produk Kami Harus Kalian Beli
+          5 أسباب تدفعك لشراء منتجنا
         </h2>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
         >
-          1. Kepercayaan
+          1. نبذة عن
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
         >
-          Kami adalah perusahaan ekspor terkemuka yang berdedikasi untuk
-          menyediakan produk arang dan briket, dibuat secara berkelanjutan dan
-          cermat untuk memenuhi beragam kebutuhan pelanggan kami
+          نحن شركة رائدة في مجال التصدير مكرسة لتوفير منتجات الفحم النباتي
+          والفحم الحجري عالية الجودة، مصنوعة بشكل مستدام ودقيق لتلبية الاحتياجات
+          المتنوعة لعملائنا
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
         >
-          2. Integritas
+          2. النزاهة
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
         >
-          Memegang teguh pada prinsip-prinsip dan memenuhi standar dan kualitas
-          yang diinginkan oleh pembeli
+          الالتزام بالمبادئ وتلبية المعايير والجودة التي يرغب فيها المشترون
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
         >
-          3. Menjaga Kualitas
+          3. الجودة
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
         >
-          Kualitas dihasilkan dengan berbagai cara dengan mendukung produk dan
-          dan layanan yang menyenangkan kepada pelanggan serta membangun
-          lingkungan kerja yang baik
+          يتم توليد الجودة بعدة طرق من خلال دعم المنتجات والخدمات الممتعة
+          للعملاء بالإضافة إلى بناء بيئة عمل جيدة
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
         >
-          4. Komitmen
+          4. الالتزام
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
         >
-          Kami akan terus memberikan layanan terbaik kepada pelanggan kami
-          setiap saat waktu.
+          سنستمر في تقديم أفضل خدمة لعملائنا في جميع الأوقات.
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
         >
-          5. Inovasi
+          5. الابتكار
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
         >
-          mengembangkan produk dan layanan yang memiliki daya tarik tinggi di
-          pasar dan memperkuat preferensi pelanggan
+          تطوير منتجات وخدمات ذات جاذبية عالية في السوق وتعزيز تفضيلات العملاء
         </p>
       </div>
       <!-- gallery section -->
       <div id="gallery" class="bg-white p-4 text-center">
         <hr class="border-gray-300 mb-4" />
-        <h2 class="text-5xl text-center font-bold mb-4">
-          Dokumentasi Pembuatan Produk
-        </h2>
-        <h3 class="text-lg font-semibold mb-2">
-          Berikut merupakan beberapa dokumentasi kami
-        </h3>
+        <h2 class="text-5xl text-center font-bold mb-4">معرض الصور</h2>
+        <h3 class="text-lg font-semibold mb-2">بعض من وثائقنا</h3>
         <p class="mb-4 w-1/2 text-balance text-center mx-auto">
-          Temukan perbedaannya! Melalui visual yang memikat, kami
-          mendemonstrasikan metode produksi arang ramah lingkungan, efektivitas
-          produk kami, dan manfaat jangka panjang yang kami berikan kepada
-          lingkungan dan masyarakat setempat.
+          اكتشف الفرق! من خلال الصور الجذابة، نوضح لك طرق إنتاج الفحم الصديقة
+          للبيئة وفعالية منتجاتنا والفوائد الدائمة التي نحققها للبيئة والمجتمعات
+          المحلية.
         </p>
         <hr class="border-gray-300 mb-4" />
         <div class="grid grid-flow-row md:grid-cols-3 gap-4">
@@ -319,11 +339,11 @@
     <h3
       class="text-black text-2xl text-center lg:text-5xl font-lato font-bold pb-8"
     >
-      Koleksi Produk Arang Kami
+      مجموعة منتجات الفحم لدينا
     </h3>
     <div
       id="product"
-      class="grid grid-flow-row grid-cols-1 lg:grid-flow-col lg:grid-cols-3 gap-y-4 p-4 lg:p-16 mx-auto"
+      class="grid grid-flow-row lg:grid-flow-col lg:grid-cols-3 gap-y-4 p-4 lg:p-16 mx-auto"
     >
       <div
         class="bg-white rounded-lg shadow-2xl mx-auto overflow-hidden hover:overflow-visible transform transition-transform duration-500 hover:-translate-y-4 lg:hover:-translate-y-12"
@@ -337,13 +357,12 @@
             class="flex items-center w-48 left-0 right-0 absolute -bottom-4 bg-white border-2 border-black px-4 py-2 text-center mx-auto justify-center"
           >
             <p class="text-sm uppercase font-bold font-lato tracking-wider">
-              ARANG BRIKET BBQ
+              قوالب الشواء بالفحم النباتي
             </p>
           </div>
         </div>
         <p class="text-justify text-balance py-4 mx-auto w-48 lg:w-64">
-          Briket arang ini terbuat dari berbagai bahan seperti serbuk gergaji
-          dan tempurung kelapa
+          تُصنع قوالب الفحم هذه من مواد مختلفة مثل نشارة الخشب وقشور جوز الهند
         </p>
       </div>
       <div
@@ -358,14 +377,13 @@
             class="flex items-center w-48 left-0 right-0 absolute -bottom-4 bg-white border-2 border-black px-4 py-2 text-center mx-auto justify-center"
           >
             <p class="text-sm uppercase font-bold font-lato tracking-wider">
-              ARANG KAYU KERAS
+              الفحم الصلب
             </p>
           </div>
         </div>
         <p class="text-justify text-balance py-4 mx-auto w-48 lg:w-64">
-          Arang kayu kami terbuat dari kayu pilihan, mulai dari kayu halaban,
-          kayu mahoni, kayu jawa atau bisa juga dicampur dengan kayu keras
-          lainnya.
+          يُصنع الفحم الخشبي لدينا من أخشاب منتقاة، تتراوح بين خشب الحلبان وخشب
+          الماهوجني وخشب التمر الهندي أو يمكن خلطه أيضاً مع أخشاب صلبة أخرى.
         </p>
       </div>
       <div
@@ -380,13 +398,39 @@
             class="flex items-center w-48 left-0 right-0 absolute -bottom-4 bg-white border-2 border-black px-4 py-2 text-center mx-auto justify-center"
           >
             <p class="text-sm uppercase font-bold font-lato tracking-wider">
-              ARANG TEMPURUNG KELAPA
+              فحم قشر جوز الهند
             </p>
           </div>
         </div>
         <p class="text-justify text-balance py-4 mx-auto w-48 lg:w-64">
-          Arang batok kelapa kami merupakan bahan yang dapat digunakan untuk
-          berbagai jenis kebutuhan.
+          فحم قشرة جوز الهند لدينا هو مادة يمكن استخدامها لأنواع مختلفة من
+          الاحتياجات.
+        </p>
+      </div>
+    </div>
+    <div
+      id="product"
+      class="grid grid-flow-row lg:grid-flow-col lg:grid-cols-3 gap-y-4 p-4 lg:p-16 mx-auto"
+    >
+      <div
+        class="bg-white rounded-lg shadow-2xl mx-auto overflow-hidden hover:overflow-visible transform transition-transform duration-500 hover:-translate-y-4 lg:hover:-translate-y-12"
+      >
+        <div class="relative">
+          <img
+            src="src/images/arangbbq.jpg"
+            class="h-96 w-[300px] object-cover mx-auto"
+          />
+          <div
+            class="flex items-center w-48 left-0 right-0 absolute -bottom-4 bg-white border-2 border-black px-4 py-2 text-center mx-auto justify-center"
+          >
+            <p class="text-sm uppercase font-bold font-lato tracking-wider">
+              CHARCOAL BBQ BRIQUETTES
+            </p>
+          </div>
+        </div>
+        <p class="text-justify text-balance py-4 mx-auto w-48 lg:w-64">
+          These charcoal briquettes are made from various materials such as
+          sawdust and coconut shells
         </p>
       </div>
     </div>
@@ -399,13 +443,9 @@
         <h3
           class="text-white text-2xl lg:text-5xl font-lato font-semibold pb-8"
         >
-          Anda Tertarik ? Bisa Banget Hubungi Kita
+          Intrested ? Please Contact Us
         </h3>
-        <form
-          id="contact-form"
-          action="mailto:kamalmuhammad414@gmail.com"
-          method="post"
-        >
+        <form id="contact-form" action="sendemail.php" method="post">
           <div class="bg-white rounded-lg shadow-2xl py-4 px-10 lg:w-1/2">
             <div class="mb-4">
               <!-- <label
@@ -419,7 +459,7 @@
                   name="name"
                   id="name"
                   class="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="Nama Anda"
+                  placeholder="First Name"
                 />
               </div>
             </div>
@@ -457,7 +497,7 @@
                   name="phone"
                   id="phone"
                   class="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="No Telepon (Optional)"
+                  placeholder="Phone Number (Optional)"
                 />
               </div>
             </div>
@@ -467,7 +507,7 @@
                   rows="4"
                   name="message"
                   id="message"
-                  placeholder="Pesan"
+                  placeholder="Message"
                   class="block w-full rounded-md border-0 px-4 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 ></textarea>
               </div>
@@ -479,15 +519,14 @@
                 value="Send"
                 class="w-full transition ease-in-out hover:-translate-y-1 hover:scale-100 rounded-sm bg-black px-4 py-2 lg:px-6 lg:py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
               >
-                <p class="font-lato">Kirimi Saya Pesan</p>
+                <p class="font-lato">Send Me Message</p>
               </button>
             </div>
           </div>
         </form>
       </article>
     </div>
-    <!-- whatsapp button -->
-    <div class="fixed bottom-4 mb-2 left-4 z-50">
+    <div class="fixed bottom-4 left-4 z-50">
       <a
         href="https://api.whatsapp.com/send/?phone=6289529312100"
         target="_blank"
@@ -524,9 +563,10 @@
             clip-rule="evenodd"
           ></path>
         </svg>
-        <span class="hidden lg:contents contact-text">Kontak Kami</span>
+        <span class="hidden lg:contents contact-text">Contact Us</span>
       </a>
     </div>
+    <!-- whatsapp button -->
     <footer class="bg-black">
       <div
         class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8"
@@ -579,7 +619,6 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper", {
@@ -651,7 +690,7 @@
       form.addEventListener("submit", function (event) {
         event.preventDefault();
         form.submit();
-        window.location.href = "index-id.html"; // Replace with your desired URL
+        window.location.href = "index.html"; // Replace with your desired URL
       });
     </script>
   </body>
