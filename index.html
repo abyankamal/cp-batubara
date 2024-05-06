@@ -431,7 +431,7 @@
         </div>
         <p class="text-justify text-balance py-4 mx-auto w-48 lg:w-64">
           Charcoal briquettes in the form of cubes are made from coconut shells
-          and natural ingredients used to burn Sisha
+          and natural ingredients used to burn sisha
         </p>
       </div>
     </div>
@@ -620,6 +620,10 @@
         </div>
       </div>
     </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper", {
@@ -693,6 +697,28 @@
         form.submit();
         window.location.href = "index.html"; // Replace with your desired URL
       });
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "YOUR_PUBLIC_KEY",
+        });
+      })();
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm("contact_service", "contact_form", this).then(
+              () => {
+                console.log("SUCCESS!");
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
     </script>
   </body>
 </html>
