@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <link rel="icon" type="image/x-icon" href="src/images/favicon.png" />
     <title>Sinar Niaga Group</title>
     <link
@@ -446,7 +450,7 @@
         >
           Intrested ? Please Contact Us
         </h3>
-        <form id="contact-form" action="sendemail.php" method="post">
+        <form id="contact-form" method="post">
           <div class="bg-white rounded-lg shadow-2xl py-4 px-10 lg:w-1/2">
             <div class="mb-4">
               <!-- <label
@@ -515,9 +519,8 @@
             </div>
             <div class="flex justify-center lg:justify-start mt-8">
               <button
-                target="_blank"
                 type="submit"
-                value="Send"
+                onclick="sendMail()"
                 class="w-full transition ease-in-out hover:-translate-y-1 hover:scale-100 rounded-sm bg-black px-4 py-2 lg:px-6 lg:py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
               >
                 <p class="font-lato">Send Me Message</p>
@@ -620,10 +623,6 @@
         </div>
       </div>
     </footer>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper", {
@@ -690,35 +689,30 @@
       closeMenuButton.addEventListener("click", () => {
         mobileMenu.style.display = "none";
       });
-      const form = document.getElementById("contact-form");
-
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        form.submit();
-        window.location.href = "index.html"; // Replace with your desired URL
-      });
       (function () {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init({
-          publicKey: "YOUR_PUBLIC_KEY",
-        });
+        emailjs.init("_29Bus41o1kCDTs-A");
       })();
-      window.onload = function () {
-        document
-          .getElementById("contact-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-            // these IDs from the previous steps
-            emailjs.sendForm("contact_service", "contact_form", this).then(
-              () => {
-                console.log("SUCCESS!");
-              },
-              (error) => {
-                console.log("FAILED...", error);
-              }
-            );
-          });
-      };
+      function sendMail() {
+        let params = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          message: document.getElementById("message").value,
+        };
+
+        const serviceID = "service_yij2dly";
+        const templateID = "template_7l9a3ed";
+
+        emailjs
+          .send(serviceID, templateID, params)
+          .then((res) => {
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+            console.log(res);
+            alert("Your message sent successfully!!");
+          })
+          .catch((err) => console.log(err));
+      }
     </script>
   </body>
 </html>
