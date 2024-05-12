@@ -709,22 +709,30 @@
             );
           });
       };
-      let params = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
+      const messages = {
+        en: {
+          title: "Sinar Niaga Group",
+          companyDescription: `We are a supplier of briquettes and charcoal in Indonesia Through
+            our dedicated production and quality control team who tirelessly
+            work to provide the best quality briquettes and charcoal expected by
+            our clients.`,
+        },
+        id: {},
+        ar: {},
       };
-
-      emailjs
-        .sendfor(serviceID, templateID, params)
-        .then((res) => {
-          document.getElementById("name").value = "";
-          document.getElementById("email").value = "";
-          document.getElementById("message").value = "";
-          console.log(res);
-          alert("Your message sent successfully!!");
-        })
-        .catch((err) => console.log(err));
+      function changeLanguage(lang) {
+        document.getElementById("companyName").innerText =
+          messages[lang]["companyName"];
+        document.getElementById("companyDescription").innerText =
+          messages[lang]["companyDescription"];
+        document.getElementById("reasonsHeader").innerText =
+          messages[lang]["reasonsHeader"];
+        document.getElementById("reason1Title").innerText =
+          messages[lang]["reason1Title"];
+        document.getElementById("reason1Text").innerText =
+          messages[lang]["reason1Text"];
+        // Ubah teks untuk alasan lainnya di sini
+      }
     </script>
   </body>
 </html>
