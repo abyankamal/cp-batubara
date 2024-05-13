@@ -64,41 +64,52 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#home" class="text-sm font-semibold leading-6 text-gray-900"
+          <a
+            href="#home"
+            class="text-sm font-semibold leading-6 text-gray-900"
+            id="home"
             >Home</a
           >
-          <a href="#about" class="text-sm font-semibold leading-6 text-gray-900"
+          <a
+            href="#about"
+            class="text-sm font-semibold leading-6 text-gray-900"
+            id="about"
             >About</a
           >
           <a
             href="#gallery"
             class="text-sm font-semibold leading-6 text-gray-900"
+            id="gallery"
             >Gallery</a
           >
           <a
             href="#contact"
             class="text-sm font-semibold leading-6 text-gray-900"
+            id="contact"
             >Contact</a
           >
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <span class="isolate inline-flex rounded-md shadow-sm">
             <button
-              onclick="window.location.href='index.html'"
+              onclick="changeLanguage('en')"
+              id="englishButton"
               type="button"
               class="relative font-lato inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
             >
               English
             </button>
             <button
-              onclick="window.location.href='index-id.html'"
+              onclick="changeLanguage('id')"
+              id="indonesianButton"
               type="button"
               class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
             >
               Indonesian
             </button>
             <button
-              onclick="window.location.href='index-ar.html'"
+              onclick="changeLanguage('ar')"
+              id="arabicButton"
               type="button"
               class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
             >
@@ -149,41 +160,54 @@
               <div class="space-y-2 py-6">
                 <a
                   href="#home"
+                  id="home"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Home</a
                 >
                 <a
                   href="#about"
+                  id="about"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >About</a
                 >
                 <a
                   href="#gallery"
+                  id="galleryMobile"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Gallery</a
                 >
                 <a
                   href="#contact"
+                  id="contact"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Contact</a
                 >
               </div>
               <div class="py-6">
-                <p class="mb-4">Language Option</p>
                 <span class="isolate inline-flex rounded-md shadow-sm">
                   <button
-                    onclick="window.location.href='index.html'"
+                    onclick="changeLanguage('en')"
+                    id="englishButton"
                     type="button"
                     class="relative font-lato inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
                   >
                     English
                   </button>
                   <button
-                    onclick="window.location.href='index-id.html'"
+                    onclick="changeLanguage('id')"
+                    id="indonesianButton"
                     type="button"
                     class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
                   >
                     Indonesian
+                  </button>
+                  <button
+                    onclick="changeLanguage('ar')"
+                    id="arabicButton"
+                    type="button"
+                    class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
+                  >
+                    Arabic
                   </button>
                 </span>
               </div>
@@ -207,6 +231,7 @@
         <div class="lg:w-[700px]">
           <p
             class="text-white font-lato text-balance text-md lg:text-lg font-normal"
+            id="companyDescription"
           >
             We are a supplier of briquettes and charcoal in Indonesia Through
             our dedicated production and quality control team who tirelessly
@@ -221,7 +246,7 @@
           class="transition ease-in-out hover:-translate-y-1 hover:scale-100 rounded-full bg-green-600 px-4 py-2 lg:px-6 lg:py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
           href="https://api.whatsapp.com/send/?phone=6289529312100"
         >
-          <p class="font-lato">Order Now</p>
+          <p class="font-lato" id="order">Order Now</p>
         </a>
       </div>
     </div>
@@ -232,16 +257,19 @@
       <div id="about" class="px-auto py-5 text-wrap lg:w-[700px] mx-auto">
         <h2
           class="text-xl lg:text-3xl font-extrabold leading-tight text-gray-900 pb-8 lg:pb-16"
+          id="reasonsHeader"
         >
           5 Reasons Why Our Product Must You Buy
         </h2>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
+          id="reason1Title"
         >
           1. About
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
+          id="reason1Text"
         >
           We are a leading export company dedicated to providing high quality
           charcoal and briquette products, sustainably made and meticulously to
@@ -249,44 +277,52 @@
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
+          id="reason2Title"
         >
           2. Integrity
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
+          id="reason2Text"
         >
           Stick to the principles and meet the standards and quality desired by
           buyers
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
+          id="reason3Title"
         >
           3. Quality
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
+          id="reason3Text"
         >
           Quality is generated in many ways by supporting pleasant products and
           services to customers as well as building a good working environment
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
+          id="reason4Title"
         >
           4. Commitment
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
+          id="reason4Text"
         >
           We will continue to provide the best service to our customers at all
           times.
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
+          id="reason5Title"
         >
           5. Innovation
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
+          id="reason5Text"
         >
           Develop products and services that have high appeal in the market and
           strengthen customer preferences
@@ -295,9 +331,16 @@
       <!-- gallery section -->
       <div id="gallery" class="bg-white p-4 text-center">
         <hr class="border-gray-300 mb-4" />
-        <h2 class="text-5xl text-center font-bold mb-4">Our Gallery</h2>
-        <h3 class="text-lg font-semibold mb-2">Some of our documentation</h3>
-        <p class="mb-4 w-1/2 text-balance text-center mx-auto">
+        <h2 class="text-5xl text-center font-bold mb-4" id="ourGallery">
+          Our Gallery
+        </h2>
+        <h3 class="text-lg font-semibold mb-2" id="someDocumentation">
+          Some of our documentation
+        </h3>
+        <p
+          class="mb-4 w-1/2 text-balance text-center mx-auto"
+          id="galleryDescription"
+        >
           Discover the difference! Through captivating visuals, we demonstrate
           our eco-friendly charcoal production methods, the effectiveness of our
           products, and the lasting benefits we bring to the environment and
@@ -341,6 +384,7 @@
     <!-- Product Section -->
     <h3
       class="text-black text-2xl text-center lg:text-5xl font-lato font-bold pb-8"
+      id="charcoalCollection"
     >
       Our Charcoal Products Collection
     </h3>
@@ -711,8 +755,41 @@
       };
       const messages = {
         en: {
-          title: "Sinar Niaga Group",
+          home: "Home",
+          about: "About",
+          gallery: "Gallery",
+          contact: "Contact",
+          englishButton: `English`,
+          indonesianButton: "Indonesian",
+          arabicButton: "Arabic",
           companyDescription: `We are a supplier of briquettes and charcoal in Indonesia Through
+            our dedicated production and quality control team who tirelessly
+            work to provide the best quality briquettes and charcoal expected by
+            our clients.`,
+          order: "Order Now",
+          reasonsHeader: `5 Reasons Why Our Product Must You Buy`,
+          reason1Title: `Quality`,
+          reason1Text: `We are a supplier of briquettes and charcoal in Indonesia Through
+            our dedicated production and quality control team who tirelessly
+            work to provide the best quality briquettes and charcoal expected by
+            our clients.`,
+          reason2Title: `Reliability`,
+          reason2Text: `We are a supplier of briquettes and charcoal in Indonesia Through
+            our dedicated production and quality control team who tirelessly
+            work to provide the best quality briquettes and charcoal expected by
+            our clients.`,
+          reason3Title: `Affordability`,
+          reason3Text: `We are a supplier of briquettes and charcoal in Indonesia Through
+            our dedicated production and quality control team who tirelessly
+            work to provide the best quality briquettes and charcoal expected by
+            our clients.`,
+          reason4Title: `Efficiency`,
+          reason4Text: `We are a supplier of briquettes and charcoal in Indonesia Through
+            our dedicated production and quality control team who tirelessly
+            work to provide the best quality briquettes and charcoal expected by
+            our clients.`,
+          reason5Title: `Satisfaction`,
+          reason5Text: `We are a supplier of briquettes and charcoal in Indonesia Through
             our dedicated production and quality control team who tirelessly
             work to provide the best quality briquettes and charcoal expected by
             our clients.`,
