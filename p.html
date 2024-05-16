@@ -25,6 +25,7 @@
           transform: translateY(0);
         }
       }
+
       .animate-content {
         animation: fadeInUp 1s ease-in-out;
       }
@@ -66,25 +67,25 @@
           <a
             href="#home"
             class="text-sm font-semibold leading-6 text-gray-900"
-            id="homeLink"
+            id="home"
             >Home</a
           >
           <a
             href="#about"
             class="text-sm font-semibold leading-6 text-gray-900"
-            id="aboutLink"
+            id="about"
             >About</a
           >
           <a
             href="#gallery"
             class="text-sm font-semibold leading-6 text-gray-900"
-            id="galleryLink"
+            id="gallery"
             >Gallery</a
           >
           <a
             href="#contact"
             class="text-sm font-semibold leading-6 text-gray-900"
-            id="contactLink"
+            id="contact"
             >Contact</a
           >
         </div>
@@ -159,25 +160,25 @@
               <div class="space-y-2 py-6">
                 <a
                   href="#home"
-                  id="homeLinkMobile"
+                  id="home"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Home</a
                 >
                 <a
                   href="#about"
-                  id="aboutLinkMobile"
+                  id="about"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >About</a
                 >
                 <a
                   href="#gallery"
-                  id="galleryLinkMobile"
+                  id="galleryMobile"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Gallery</a
                 >
                 <a
                   href="#contact"
-                  id="contactLinkMobile"
+                  id="contact"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >Contact</a
                 >
@@ -186,7 +187,7 @@
                 <span class="isolate inline-flex rounded-md shadow-sm">
                   <button
                     onclick="changeLanguage('en')"
-                    id="englishButtonMobile"
+                    id="englishButton"
                     type="button"
                     class="relative font-lato inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
                   >
@@ -194,7 +195,7 @@
                   </button>
                   <button
                     onclick="changeLanguage('id')"
-                    id="indonesianButtonMobile"
+                    id="indonesianButton"
                     type="button"
                     class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
                   >
@@ -202,7 +203,7 @@
                   </button>
                   <button
                     onclick="changeLanguage('ar')"
-                    id="arabicButtonMobile"
+                    id="arabicButton"
                     type="button"
                     class="relative font-lato -ml-px inline-flex items-center bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
                   >
@@ -215,6 +216,7 @@
         </div>
       </div>
     </header>
+    <!-- top page section -->
     <div
       id="home"
       class="box-content max-w-full lg:pl-20 py-10 lg:py-30"
@@ -223,7 +225,6 @@
       <article class="text-wrap text-center lg:text-left">
         <h3
           class="text-white text-2xl lg:text-5xl font-lato font-semibold pb-8"
-          id="companyTitle"
         >
           Sinar Niaga Group
         </h3>
@@ -249,18 +250,14 @@
         </a>
       </div>
     </div>
-
     <main
       class="grid grid-flow-row grid-cols-1 gap-y-1.5 lg:gap-4 py-8 lg:py-16 mx-auto px-8 lg:px-16"
     >
       <!-- article section -->
-      <div
-        id="aboutSection"
-        class="px-auto py-5 text-wrap lg:w-[700px] mx-auto"
-      >
+      <div id="about" class="px-auto py-5 text-wrap lg:w-[700px] mx-auto">
         <h2
           class="text-xl lg:text-3xl font-extrabold leading-tight text-gray-900 pb-8 lg:pb-16"
-          id="aboutTitle"
+          id="reasonsHeader"
         >
           5 Reasons Why Our Product Must You Buy
         </h2>
@@ -272,11 +269,11 @@
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
-          id="reason1Description"
+          id="reason1Text"
         >
           We are a leading export company dedicated to providing high quality
           charcoal and briquette products, sustainably made and meticulously to
-          meet the diverse needs of our customers.
+          meet the diverse needs of our customers
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
@@ -286,10 +283,10 @@
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
-          id="reason2Description"
+          id="reason2Text"
         >
           Stick to the principles and meet the standards and quality desired by
-          buyers.
+          buyers
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
@@ -299,10 +296,10 @@
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
-          id="reason3Description"
+          id="reason3Text"
         >
           Quality is generated in many ways by supporting pleasant products and
-          services to customers as well as building a good working environment.
+          services to customers as well as building a good working environment
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-bold text-black"
@@ -312,7 +309,7 @@
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
-          id="reason4Description"
+          id="reason4Text"
         >
           We will continue to provide the best service to our customers at all
           times.
@@ -325,19 +322,19 @@
         </p>
         <p
           class="mt-1 text-md font-lato lg:text-xl leading-6 font-normal text-black"
-          id="reason5Description"
+          id="reason5Text"
         >
           Develop products and services that have high appeal in the market and
-          strengthen customer preferences.
+          strengthen customer preferences
         </p>
       </div>
       <!-- gallery section -->
-      <div id="gallerySection" class="bg-white p-4 text-center">
+      <div id="gallery" class="bg-white p-4 text-center">
         <hr class="border-gray-300 mb-4" />
-        <h2 class="text-5xl text-center font-bold mb-4" id="galleryTitle">
+        <h2 class="text-5xl text-center font-bold mb-4" id="ourGallery">
           Our Gallery
         </h2>
-        <h3 class="text-lg font-semibold mb-2" id="gallerySubtitle">
+        <h3 class="text-lg font-semibold mb-2" id="someDocumentation">
           Some of our documentation
         </h3>
         <p
@@ -378,12 +375,13 @@
           />
           <img
             src="src/images/produksi6.jpg"
-            alt="Image 6"
+            alt="Image 5"
             class="rounded-lg w-[300px] lg:w-[600px] h-[200px] mx-auto object-cover"
           />
         </div>
       </div>
     </main>
+    <!-- Product Section -->
     <h3
       class="text-black text-2xl text-center lg:text-5xl font-lato font-bold pb-8"
       id="charcoalCollection"
@@ -637,9 +635,9 @@
             clip-rule="evenodd"
           ></path>
         </svg>
-        <!-- <span class="hidden lg:contents contact-text" id="contactUs"
+        <span class="hidden lg:contents contact-text" id="contactUs"
           >Contact Us</span
-        > -->
+        >
       </a>
     </div>
     <!-- whatsapp button -->
@@ -695,28 +693,61 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      // document.addEventListener("DOMContentLoaded", function () {
-      //   const menuToggle = document.getElementById("menuToggle");
-      //   const menuItems = document.getElementById("menuItems");
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
 
-      //   menuToggle.addEventListener("click", function () {
-      //     menuItems.classList.toggle("hidden");
-      //   });
-      // });
-      // const contactText = document.querySelector(".contact-text");
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
 
-      // document
-      //   .querySelector(".fixed.bottom-4.left-4.z-50 a")
-      //   .addEventListener("mouseenter", () => {
-      //     contactText.textContent = "WhatsApp";
-      //   });
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
 
-      // document
-      //   .querySelector(".fixed.bottom-4.left-4.z-50 a")
-      //   .addEventListener("mouseleave", () => {
-      //     contactText.textContent = "Contact Us";
-      //   });
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+        breakpoints: {
+          // when window width is >= 768px
+          768: {
+            height: 400,
+          },
+        },
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menuToggle");
+        const menuItems = document.getElementById("menuItems");
+
+        menuToggle.addEventListener("click", function () {
+          menuItems.classList.toggle("hidden");
+        });
+      });
+      const contactText = document.querySelector(".contact-text");
+
+      document
+        .querySelector(".fixed.bottom-4.left-4.z-50 a")
+        .addEventListener("mouseenter", () => {
+          contactText.textContent = "WhatsApp";
+        });
+
+      document
+        .querySelector(".fixed.bottom-4.left-4.z-50 a")
+        .addEventListener("mouseleave", () => {
+          contactText.textContent = "Contact Us";
+        });
       const mobileMenuButton = document.getElementById("mobileMenuButton");
       const mobileMenu = document.getElementById("mobileMenu");
       const closeMenuButton = document.getElementById("closeMenuButton");
@@ -749,46 +780,44 @@
             );
           });
       };
-      const messages = {
+      let messages = {
         en: {
-          homeLink: "Home",
-          aboutLink: "About",
-          galleryLink: "Gallery",
-          contactLink: "Contact",
-          homeLinkMobile: "Home",
-          aboutLinkMobile: "About",
-          galleryLinkMobile: "Gallery",
-          contactLinkMobile: "Contact",
+          home: "Home",
+          about: "About",
+          gallery: "Gallery",
+          contact: "Contact",
           englishButton: `English`,
           indonesianButton: "Indonesian",
           arabicButton: "Arabic",
-          englishButtonMobile: `English`,
-          indonesianButtonMobile: "Indonesian",
-          arabicButtonMobile: "Arabic",
-          companyTitle: "Sinar Niaga Group",
-          companyDescription:
-            "We are a supplier of briquettes and charcoal in Indonesia Through our dedicated production and quality control team who tirelessly work to provide the best quality briquettes and charcoal expected by our clients.",
+          companyDescription: `We are a supplier of briquettes and charcoal in Indonesia Through
+            our dedicated production and quality control team who tirelessly
+            work to provide the best quality briquettes and charcoal expected by
+            our clients.`,
           order: "Order Now",
-          aboutTitle: "5 Reasons Why Our Product Must You Buy",
-          reason1Title: "1. About",
-          reason1Description:
-            "We are a leading export company dedicated to providing high quality charcoal and briquette products, sustainably made and meticulously to meet the diverse needs of our customers.",
-          reason2Title: "2. Integrity",
-          reason2Description:
-            "Stick to the principles and meet the standards and quality desired by buyers.",
-          reason3Title: "3. Quality",
-          reason3Description:
-            "Quality is generated in many ways by supporting pleasant products and services to customers as well as building a good working environment.",
-          reason4Title: "4. Commitment",
-          reason4Description:
-            "We will continue to provide the best service to our customers at all times.",
-          reason5Title: "5. Innovation",
-          reason5Description:
-            "Develop products and services that have high appeal in the market and strengthen customer preferences.",
-          galleryTitle: "Our Gallery",
-          gallerySubtitle: "Some of our documentation",
-          galleryDescription:
-            "Discover the difference! Through captivating visuals, we demonstrate our eco-friendly charcoal production methods, the effectiveness of our products, and the lasting benefits we bring to the environment and local communities.",
+          reasonsHeader: `5 Reasons Why Our Product Must You Buy`,
+          reason1Title: `1. About`,
+          reason1Text: `We are a supplier of briquettes and charcoal in Indonesia Through
+            our dedicated production and quality control team who tirelessly
+            work to provide the best quality briquettes and charcoal expected by
+            our clients.`,
+          reason2Title: `2. Integrity`,
+          reason2Text: `Stick to the principles and meet the standards and quality desired by
+          buyers`,
+          reason3Title: `3. Quality`,
+          reason3Text: `Quality is generated in many ways by supporting pleasant products and
+          services to customers as well as building a good working environment.`,
+          reason4Title: `4. Commitment`,
+          reason4Text: `We will continue to provide the best service to our customers at all
+          times.`,
+          reason5Title: `5. Innovation`,
+          reason5Text: `Develop products and services that have high appeal in the market and
+          strengthen customer preferences`,
+          ourGallery: "Our Gallery",
+          someDocumentation: "Some of our documentation",
+          galleryDescription: `Discover the difference! Through captivating visuals, we demonstrate
+          our eco-friendly charcoal production methods, the effectiveness of our
+          products, and the lasting benefits we bring to the environment and
+          local communities.`,
           charcoalCollection: "Our Charcoal Products Collection",
           charcoalBbqTitle: "CHARCOAL BBQ BRIQUETTES",
           charcoalBbqText: `These charcoal briquettes are made from various materials such as
@@ -806,44 +835,42 @@
           intrested: "Intrested ? Please Contact Us",
         },
         id: {
-          homeLink: "Beranda",
-          aboutLink: "Tentang",
-          galleryLink: "Galeri",
-          contactLink: "Kontak",
-          homeLinkMobile: "Beranda",
-          aboutLinkMobile: "Tentang",
-          galleryLinkMobile: "Galeri",
-          contactLinkMobile: "Kontak",
+          home: "Home",
+          about: "Tentang",
+          gallery: "Galleri",
+          contact: "Kontrak",
           englishButton: `Inggris`,
           indonesianButton: "Indonesia",
           arabicButton: "Arab",
-          englishButtonMobile: `Inggris`,
-          indonesianButtonMobile: "Indonesia",
-          arabicButtonMobile: "Arab",
-          companyTitle: "Sinar Niaga Group",
-          companyDescription:
-            "Kami adalah pemasok briket dan arang di Indonesia. Melalui tim produksi dan kontrol kualitas kami yang berdedikasi, yang bekerja tanpa lelah untuk menyediakan briket dan arang berkualitas terbaik yang diharapkan oleh klien kami.",
-          order: "Pesan Sekarang",
-          aboutTitle: "5 Alasan Mengapa Produk Kami Harus Anda Beli",
-          reason1Title: "1. Tentang",
-          reason1Description:
-            "Kami adalah perusahaan ekspor terkemuka yang berdedikasi untuk menyediakan produk arang dan briket berkualitas tinggi, dibuat secara berkelanjutan dan secara cermat untuk memenuhi kebutuhan pelanggan kami yang beragam.",
-          reason2Title: "2. Integritas",
-          reason2Description:
-            "Berpegang pada prinsip dan memenuhi standar serta kualitas yang diinginkan oleh pembeli.",
-          reason3Title: "3. Kualitas",
-          reason3Description:
-            "Kualitas dihasilkan dengan berbagai cara dengan mendukung produk dan layanan yang menyenangkan bagi pelanggan serta membangun lingkungan kerja yang baik.",
-          reason4Title: "4. Komitmen",
-          reason4Description:
-            "Kami akan terus memberikan layanan terbaik kepada pelanggan kami setiap saat.",
-          reason5Title: "5. Inovasi",
-          reason5Description:
-            "Mengembangkan produk dan layanan yang memiliki daya tarik tinggi di pasar dan memperkuat preferensi pelanggan.",
-          galleryTitle: "Galeri Kami",
-          gallerySubtitle: "Beberapa dokumentasi kami",
-          galleryDescription:
-            "Temukan perbedaannya! Melalui visual yang memikat, kami menunjukkan metode produksi arang ramah lingkungan kami, efektivitas produk kami, dan manfaat jangka panjang yang kami bawa ke lingkungan dan masyarakat lokal.",
+          companyDescription: `Kami adalah pemasok briket dan arang di Indonesia. Melalui tim
+            produksi dan kontrol kualitas kami yang berdedikasi yang tanpa lelah
+            bekerja untuk menyediakan briket dan arang dengan kualitas terbaik
+            yang diharapkan oleh klien kami.`,
+          order: "Order Sekarang",
+          reasonsHeader: `5 Alasan Mengapa Produk Kami Harus Kalian Beli`,
+          reason1Title: `1. Kepercayaan`,
+          reason1Text: `Kami adalah perusahaan ekspor terkemuka yang berdedikasi untuk
+          menyediakan produk arang dan briket, dibuat secara berkelanjutan dan
+          cermat untuk memenuhi beragam kebutuhan pelanggan kami`,
+          reason2Title: `2. Integritas`,
+          reason2Text: `Memegang teguh pada prinsip-prinsip dan memenuhi standar dan kualitas
+          yang diinginkan oleh pembeli`,
+          reason3Title: `3. Menjaga Kualitas`,
+          reason3Text: `Kualitas dihasilkan dengan berbagai cara dengan mendukung produk dan
+          dan layanan yang menyenangkan kepada pelanggan serta membangun
+          lingkungan kerja yang baik`,
+          reason4Title: `4. Komitmen`,
+          reason4Text: `Kami akan terus memberikan layanan terbaik kepada pelanggan kami
+          setiap saat waktu.`,
+          reason5Title: `5. Inovasi`,
+          reason5Text: `Mengembangkan produk dan layanan yang memiliki daya tarik tinggi di
+          pasar dan memperkuat preferensi pelanggan`,
+          ourGallery: "Dokumentasi Pembuatan Produk",
+          someDocumentation: "Berikut merupakan beberapa dokumentasi kami",
+          galleryDescription: `Temukan perbedaannya! Melalui visual yang memikat, kami
+          mendemonstrasikan metode produksi arang ramah lingkungan, efektivitas
+          produk kami, dan manfaat jangka panjang yang kami berikan kepada
+          lingkungan dan masyarakat setempat.`,
           charcoalCollection: "Koleksi Produk Arang Kami",
           charcoalBbqTitle: "ARANG BRIKET BBQ",
           charcoalBbqText: `Briket arang ini terbuat dari berbagai bahan seperti serbuk gergaji
@@ -861,142 +888,116 @@
           intrested: "Anda Tertarik ? Bisa Banget Hubungi Kita",
         },
         ar: {
-          homeLink: "الصفحة الرئيسية",
-          aboutLink: "حول",
-          galleryLink: "صالة عرض",
-          contactLink: "اتصل",
-          homeLinkMobile: "الصفحة الرئيسية",
-          aboutLinkMobile: "حول",
-          galleryLinkMobile: "صالة عرض",
-          contactLinkMobile: "اتصل",
+          home: "الصفحة الرئيسية",
+          about: "نبذة عن",
+          gallery: "معرض الصور",
+          contact: "اتصل بنا",
           englishButton: `اللغة الإنجليزية`,
           indonesianButton: "الإندونيسية",
           arabicButton: "العربية",
-          englishButtonMobile: `اللغة الإنجليزية`,
-          indonesianButtonMobile: "الإندونيسية",
-          arabicButtonMobile: "العربية",
-          companyTitle: "مجموعة سينار نياغا",
-          companyDescription:
-            "نحن مورد للفحم والفحم في إندونيسيا. من خلال فريق الإنتاج ومراقبة الجودة المخصص لدينا الذين يعملون بلا كلل لتقديم أفضل جودة للفحم والفحم المتوقع من قبل عملائنا.",
-          order: "اطلب الآن",
-          aboutTitle: "5 أسباب تجعل منتجنا يجب أن تشتريه",
-          reason1Title: "1. حول",
-          reason1Description:
-            "نحن شركة تصدير رائدة مكرسة لتوفير منتجات فحم وفحم عالية الجودة، مصنوعة بشكل مستدام وبعناية لتلبية الاحتياجات المتنوعة لعملائنا.",
-          reason2Title: "2. النزاهة",
-          reason2Description:
-            "التمسك بالمبادئ وتلبية المعايير والجودة المطلوبة من قبل المشترين.",
-          reason3Title: "3. الجودة",
-          reason3Description:
-            "يتم تحقيق الجودة بطرق عديدة من خلال دعم المنتجات والخدمات الممتعة للعملاء بالإضافة إلى بناء بيئة عمل جيدة.",
-          reason4Title: "4. الالتزام",
-          reason4Description:
-            "سنواصل تقديم أفضل خدمة لعملائنا في جميع الأوقات.",
-          reason5Title: "5. الابتكار",
-          reason5Description:
-            "تطوير المنتجات والخدمات التي تتمتع بجاذبية عالية في السوق وتعزيز تفضيلات العملاء.",
-          galleryTitle: "معرضنا",
-          gallerySubtitle: "بعض وثائقنا",
-          galleryDescription:
-            "اكتشف الفرق! من خلال المرئيات الجذابة، نوضح طرق إنتاج الفحم الصديقة للبيئة، وفعالية منتجاتنا، والفوائد الدائمة التي نقدمها للبيئة والمجتمعات المحلية.",
-        },
-        charcoalCollection: "مجموعة منتجات الفحم لدينا",
-        charcoalBbqTitle: "قوالب الشواء بالفحم النباتي",
-        charcoalBbqText: `تُصنع قوالب الفحم هذه من مواد مختلفة مثل نشارة الخشب وقشور جوز الهند`,
-        hardwoodTitle: "الفحم الصلب",
-        hardwoodText: `صنع الفحم الخشبي لدينا من أخشاب منتقاة، تتراوح بين خشب الحلبان وخشب
+          companyDescription: `نحن مورد للقوالب والفحم النباتي في إندونيسيا من خلال فريق الإنتاج
+            ومراقبة الجودة المتخصص الذي يعمل بلا كلل لتوفير أفضل أنواع القوالب
+            والفحم النباتي التي يتوقعها عملاؤنا.`,
+          order: "اطلبها الآن",
+          reasonsHeader: `5 أسباب تدفعك لشراء منتجنا`,
+          reason1Title: `1. نبذة عن`,
+          reason1Text: `حن شركة رائدة في مجال التصدير مكرسة لتوفير منتجات الفحم النباتي
+          والفحم الحجري عالية الجودة، مصنوعة بشكل مستدام ودقيق لتلبية الاحتياجات
+          المتنوعة لعملائنا`,
+          reason2Title: `2. النزاهة`,
+          reason2Text: `الالتزام بالمبادئ وتلبية المعايير والجودة التي يرغب فيها المشترون`,
+          reason3Title: `3. الجودة`,
+          reason3Text: `تم توليد الجودة بعدة طرق من خلال دعم المنتجات والخدمات الممتعة
+          للعملاء بالإضافة إلى بناء بيئة عمل جيدة`,
+          reason4Title: `4. الالتزام`,
+          reason4Text: `سنستمر في تقديم أفضل خدمة لعملائنا في جميع الأوقات.`,
+          reason5Title: `5. الابتكار`,
+          reason5Text: `تطوير منتجات وخدمات ذات جاذبية عالية في السوق وتعزيز تفضيلات العملاء`,
+          ourGallery: "معرض الصور<",
+          someDocumentation: "بعض من وثائقنا",
+          galleryDescription: `اكتشف الفرق! من خلال الصور الجذابة، نوضح لك طرق إنتاج الفحم الصديقة
+          للبيئة وفعالية منتجاتنا والفوائد الدائمة التي نحققها للبيئة والمجتمعات
+          المحلية.`,
+          charcoalCollection: "مجموعة منتجات الفحم لدينا",
+          charcoalBbqTitle: "قوالب الشواء بالفحم النباتي",
+          charcoalBbqText: `تُصنع قوالب الفحم هذه من مواد مختلفة مثل نشارة الخشب وقشور جوز الهند`,
+          hardwoodTitle: "الفحم الصلب",
+          hardwoodText: `صنع الفحم الخشبي لدينا من أخشاب منتقاة، تتراوح بين خشب الحلبان وخشب
           الماهوجني وخشب التمر الهندي أو يمكن خلطه أيضاً مع أخشاب صلبة أخرى.`,
-        coconutTitle: "فحم قشر جوز الهند",
-        coconutText: `حم قشرة جوز الهند لدينا هو مادة يمكن استخدامها لأنواع مختلفة من
+          coconutTitle: "فحم قشر جوز الهند",
+          coconutText: `حم قشرة جوز الهند لدينا هو مادة يمكن استخدامها لأنواع مختلفة من
           الاحتياجات.`,
-        briquetteTitle: "قوالب الفحم",
-        briquetteText: `صنع قوالب الفحم على شكل مكعبات من قشور جوز الهند والمكونات الطبيعية
+          briquetteTitle: "قوالب الفحم",
+          briquetteText: `صنع قوالب الفحم على شكل مكعبات من قشور جوز الهند والمكونات الطبيعية
           المستخدمة في حرق الشيشة`,
-        intrested: "هل أنت مهتم؟ يرجى التواصل معنا",
+          intrested: "هل أنت مهتم؟ يرجى التواصل معنا",
+        },
       };
-
       function changeLanguage(lang) {
-        document.getElementById("homeLink").textContent =
-          messages[lang].homeLink;
-        document.getElementById("aboutLink").textContent =
-          messages[lang].aboutLink;
-        document.getElementById("galleryLink").textContent =
-          messages[lang].galleryLink;
-        document.getElementById("contactLink").textContent =
-          messages[lang].contactLink;
-        document.getElementById("homeLinkMobile").textContent =
-          messages[lang].homeLink;
-        document.getElementById("aboutLinkMobile").textContent =
-          messages[lang].aboutLink;
-        document.getElementById("galleryLinkMobile").textContent =
-          messages[lang].galleryLink;
-        document.getElementById("contactLinkMobile").textContent =
-          messages[lang].contactLink;
-        document.getElementById("englishButton").textContent =
-          messages[lang].englishButton;
-        document.getElementById("indonesianButton").textContent =
-          messages[lang].indonesianButton;
-        document.getElementById("arabicButton").textContent =
-          messages[lang].arabicButton;
-        document.getElementById("englishButtonMobile").textContent =
-          messages[lang].englishButtonMobile;
-        document.getElementById("indonesianButtonMobile").textContent =
-          messages[lang].indonesianButtonMobile;
-        document.getElementById("arabicButtonMobile").textContent =
-          messages[lang].arabicButtonMobile;
-        document.getElementById("companyTitle").textContent =
-          messages[lang].companyTitle;
-        document.getElementById("companyDescription").textContent =
-          messages[lang].companyDescription;
-        document.getElementById("order").textContent = messages[lang].order;
-        document.getElementById("aboutTitle").textContent =
-          messages[lang].aboutTitle;
-        document.getElementById("reason1Title").textContent =
-          messages[lang].reason1Title;
-        document.getElementById("reason1Description").textContent =
-          messages[lang].reason1Description;
-        document.getElementById("reason2Title").textContent =
-          messages[lang].reason2Title;
-        document.getElementById("reason2Description").textContent =
-          messages[lang].reason2Description;
-        document.getElementById("reason3Title").textContent =
-          messages[lang].reason3Title;
-        document.getElementById("reason3Description").textContent =
-          messages[lang].reason3Description;
-        document.getElementById("reason4Title").textContent =
-          messages[lang].reason4Title;
-        document.getElementById("reason4Description").textContent =
-          messages[lang].reason4Description;
-        document.getElementById("reason5Title").textContent =
-          messages[lang].reason5Title;
-        document.getElementById("reason5Description").textContent =
-          messages[lang].reason5Description;
-        document.getElementById("galleryTitle").textContent =
-          messages[lang].galleryTitle;
-        document.getElementById("gallerySubtitle").textContent =
-          messages[lang].gallerySubtitle;
-        document.getElementById("galleryDescription").textContent =
-          messages[lang].galleryDescription;
+        document.getElementById("home").innerText = messages[lang]["home"];
+        document.getElementById("about").innerText = messages[lang]["about"];
+        document.getElementById("gallery").innerText =
+          messages[lang]["gallery"];
+        document.getElementById("contact").innerText =
+          messages[lang]["contact"];
+        document.getElementById("englishButton").innerText =
+          messages[lang]["englishButton"];
+        document.getElementById("indonesianButton").innerText =
+          messages[lang]["indonesianButton"];
+        document.getElementById("arabicButton").innerText =
+          messages[lang]["arabicButton"];
+        document.getElementById("companyName").innerText =
+          messages[lang]["companyName"];
+        document.getElementById("companyDescription").innerText =
+          messages[lang]["companyDescription"];
+        document.getElementById("reasonsHeader").innerText =
+          messages[lang]["reasonsHeader"];
+        document.getElementById("reason1Title").innerText =
+          messages[lang]["reason1Title"];
+        document.getElementById("reason1Text").innerText =
+          messages[lang]["reason1Text"];
+        document.getElementById("reason2Title").innerText =
+          messages[lang]["reason2Title"];
+        document.getElementById("reason2Text").innerText =
+          messages[lang]["reason2Text"];
+        document.getElementById("reason3Title").innerText =
+          messages[lang]["reason3Title"];
+        document.getElementById("reason3Text").innerText =
+          messages[lang]["reason3Text"];
+        document.getElementById("reason4Title").innerText =
+          messages[lang]["reason4Title"];
+        document.getElementById("reason4Text").innerText =
+          messages[lang]["reason4Text"];
+        document.getElementById("reason5Title").innerText =
+          messages[lang]["reason5Title"];
+        document.getElementById("reason5Text").innerText =
+          messages[lang]["reason5Text"];
+        document.getElementById("ourGallery").innerText =
+          messages[lang]["ourGallery"];
+        document.getElementById("someDocumentation").innerText =
+          messages[lang]["someDocumentation"];
+        document.getElementById("galleryDescription").innerText =
+          messages[lang]["galleryDescription"];
         document.getElementById("charcoalCollection").innerText =
-          messages[lang].charcoalCollection;
+          messages[lang]["charcoalCollection"];
         document.getElementById("charcoalBbqTitle").innerText =
-          messages[lang].charcoalBbqTitle;
+          messages[lang]["charcoalBbqTitle"];
         document.getElementById("charcoalBbqText").innerText =
-          messages[lang].charcoalBbqText;
+          messages[lang]["charcoalBbqText"];
         document.getElementById("hardwoodTitle").innerText =
-          messages[lang].hardwoodTitle;
+          messages[lang]["hardwoodTitle"];
         document.getElementById("hardwoodText").innerText =
-          messages[lang].hardwoodText;
+          messages[lang]["hardwoodText"];
         document.getElementById("coconutTitle").innerText =
-          messages[lang].coconutTitle;
+          messages[lang]["coconutTitle"];
         document.getElementById("coconutText").innerText =
-          messages[lang].coconutText;
+          messages[lang]["coconutText"];
         document.getElementById("briquetteTitle").innerText =
-          messages[lang].briquetteTitle;
+          messages[lang]["briquetteTitle"];
         document.getElementById("briquetteText").innerText =
-          messages[lang].briquetteText;
+          messages[lang]["briquetteText"];
         document.getElementById("intrested").innerText =
-          messages[lang].intrested;
+          messages[lang]["intrested"];
       }
     </script>
   </body>
